@@ -1,0 +1,62 @@
+import clsx from "clsx";
+import Marker from "./Marker";
+import { useState } from "react";
+
+const Button = ({
+  icon,
+  children,
+  href,
+  containerClassName,
+  onClick,
+  markerfill,
+  alt
+}) => {
+
+  const Inner = () => (
+    <>
+      <span className="relative flex items-center min-h-[60px] px-4 g4 rounded-2xl inner-before group-hover:before:opacity-100 overflow-hidden">
+        <span className="absolute -left-[1px]">
+          <Marker markerFill={ ([0,2]).includes(alt)  ? "#3ABEF9" : markerfill} />
+        </span>
+        {icon && (
+          <img
+            src={icon}
+            alt="circle"
+            className="size-10 mr-5 object-contain z-10"
+          />
+        )}
+
+        <span className={clsx("relative z-2 font-poppins base-bold  uppercase", 
+          ([0,2]).includes(alt) ? " text-p3" : "text-p7"
+        )}>
+          {children}
+        </span>
+      </span>
+      <span className="glow-before glow-after" />
+    </>
+  );
+
+  return href ? (
+    <a 
+      className={clsx(
+        "relative p-0.5 g5 rounded-2xl shadow-500 group",
+        containerClassName
+      )}
+      href={href}
+    >
+      <Inner />
+    </a>
+  ) : (
+    <button 
+      className={clsx(
+        "relative p-0.5 g5 rounded-2xl shadow-500 group",
+        containerClassName
+      )}
+      onClick={onClick}
+    >
+      <Inner />
+    </button>
+  );
+};
+
+export default Button;
