@@ -6,7 +6,7 @@
 
 @layer base {
   html {
-    @apply bg-s6;
+    @apply bg-s1;
   }
 
   body {
@@ -153,7 +153,7 @@
 
 
   .nav-active {
-    @apply text-p3;
+    @apply text-p7;
   }
 
   .nav-li {
@@ -238,7 +238,7 @@
   }
 
   .faq-icon {
-    @apply before:absolute before:h-0.5 before:w-3 before:bg-p1 before:content-[''] after:absolute after:h-0.5 after:w-3 after:rotate-90 after:bg-p1 after:transition-all after:duration-500 after:content-[''];
+    @apply before:absolute before:h-0.5 before:w-3 before:bg-p7 before:content-[''] after:absolute after:h-0.5 after:w-3 after:rotate-90 after:bg-p7 after:transition-all after:duration-500 after:content-[''];
   }
 
  

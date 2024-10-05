@@ -34,7 +34,7 @@ const FaqItems = ({ item, index }) => {
 
         <div className={clsx(
            "faq-icon relative flex size-12 items-center justify-center rounded-full border-2 border-s2 shadow-400 transition-all duration-500 group-hover:border-s4" ,
-           active && "before:bg-p1 after:rotate-[0] after:bg-p7"
+           active && "before:bg-p7 after:rotate-[0] after:bg-p7"
             )}>
             <div className="g4 size-11/12 rounded-full shadow-300"  />
         </div>
@@ -53,7 +53,7 @@ const FaqItems = ({ item, index }) => {
         active && "opacity-100"
         )}>
         <div className="g4 absolute inset-0.5 -z-1 rounded-3xl" />
-        <div className="absolute left-8 top-0 h-0.5 w-40 bg-p1 rounded-3xl" />
+        <div className="absolute left-8 top-0 h-0.5 w-40 bg-p7 rounded-3xl" />
       </div>
     </div>
   );

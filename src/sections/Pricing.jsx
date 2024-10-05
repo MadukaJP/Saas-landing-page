@@ -4,27 +4,10 @@ import { Element } from "react-scroll";
 import { plans } from "../constants";
 import CountUp from "react-countup";
 import Button from "../components/Button";
-import { useSwipeable } from "react-swipeable";
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(true);
 
-  const containerRef = useRef(null);
-
-  const handlers = useSwipeable({
-    onSwipedLeft: () => {
-      if (containerRef.current) {
-        containerRef.current.scrollBy({ left: 300, behavior: "smooth" });
-      }
-    },
-    onSwipedRight: () => {
-      if (containerRef.current) {
-        containerRef.current.scrollBy({ left: -300, behavior: "smooth" });
-      }
-    },
-    preventDefaultTouchmoveEvent: true,
-    trackMouse: true,
-  });
   return (
     <section>
       <Element name="pricing">
@@ -95,9 +78,7 @@ const Pricing = () => {
             <img src="/images/right-arrow.svg" width={14} alt="" />
           </div>
           <div
-            {...handlers}
-            ref={containerRef}
-            className="scroll-hide scroll-snap-x-mandatory relative z-2 -mt-12 flex items-start 
+            className="scroll-hide relative z-2 -mt-12 flex items-start 
                     max-xl:gap-5 max-xl:overflow-auto max-xl:pt-6 "
           >
             {plans.map(
@@ -116,7 +97,7 @@ const Pricing = () => {
               ) => (
                 <div
                   key={id}
-                  className="snap-start pricing-plan_first pricing-plan_last
+                  className="pricing-plan_first pricing-plan_last
                              pricing-plan_odd pricing-plan_even relative border-2 p-7
                               max-xl:min-w-80 max-lg:rounded-3xl xl:w-[calc(33.33%+2px)]"
                 >

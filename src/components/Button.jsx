@@ -16,7 +16,7 @@ const Button = ({
     <>
       <span className="relative flex items-center min-h-[60px] px-4 g4 rounded-2xl inner-before group-hover:before:opacity-100 overflow-hidden">
         <span className="absolute -left-[1px]">
-          <Marker markerFill={ ([0,2]).includes(alt)  ? "#3ABEF9" : markerfill} />
+          <Marker markerFill={ alt === 1  ? "#FDE767" : markerfill  } />
         </span>
         {icon && (
           <img
@@ -27,7 +27,7 @@ const Button = ({
         )}
 
         <span className={clsx("relative z-2 font-poppins base-bold  uppercase", 
-          ([0,2]).includes(alt) ? " text-p3" : "text-p7"
+          alt === 1 ? " text-p7" : "text-p3"
         )}>
           {children}
         </span>
