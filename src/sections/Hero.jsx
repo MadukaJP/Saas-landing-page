@@ -26,13 +26,13 @@ const Hero = () => {
             </LinkScroll>
           </div>
 
-          <div className="absolute bottom-10 left-[calc(50%)] w-[1000px] pointer-events-none hero-img_res">
+          <div className="absolute bottom-10 left-[calc(50%-100px)] w-[1000px] pointer-events-none hero-img_res">
             <div  className="relative w-[700px] h-[700px] bg-s4 blur-3xl rounded-full z-1 opacity-40">
             </div>
             <img
-                src="/images/zeus.png"
+                src="/images/afri.png"
                 alt="hero"
-                className="absolute top-0  w-[700px] max-lg:h-auto z-1"
+                className="absolute left-[12%] top-[12%]  w-[500px] max-lg:h-auto z-1"
               />
           </div>
         </div>
